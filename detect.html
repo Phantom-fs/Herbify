@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbify</title>
+    <link rel="icon" type="image/x-icon" href="css/icon.jpeg">
+    <link rel="stylesheet" href="css/styles_d.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div>
+            <h1>Herbify</h1>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Mobile navigation toggle button -->
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+    </nav> 
+
+    <!-- Main content -->
+    <div class="main-container">
+        <br> <br> <br> <br> <br> 
+        <div class="upload-container">
+            <h1>Upload Herb Image</h1>
+            <input type="file" id="imageUpload" accept="image/*">
+            <br>
+            <button id="predictButton">Predict</button>
+        </div>
+
+        <div class="result-container">
+            <div class="processed-image-container hidden">
+                <h2>Detected Herb Image</h2>
+                <img id="processedImage" src="" alt="preprocessed Image">
+            </div>
+
+            <div class="predictions-container hidden">
+                <h2>Herb Prediction</h2>
+                <table id="predictionsTable">
+                    <thead>
+                        <tr>
+                            <th>Herb</th>
+                            <th>Probability (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="predictionsList"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="predictions-container-bar hidden">
+            <h2>Graph</h2>
+            <div id="barGraph"></div>
+        </div>
+        
+    </div>
+
+    <script src="js/script_d.js"></script>
+</body>
+</html>

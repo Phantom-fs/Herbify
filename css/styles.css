@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-image: url('bg.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .container {
@@ -13,10 +13,11 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    max-width: 800px;
+    max-width: 80%;
     margin: 50px auto;
     background-color: rgba(229, 255, 191, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
 }
 
 .container h1 {
@@ -38,8 +39,9 @@ p {
     padding: 20px;
     max-width: 80%;
     margin: 50px auto;
-    background-color: #ffffff;
+    background-color: rgba(195, 251, 200, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
 }
 
 .container h1 {
@@ -74,6 +76,33 @@ button:hover {
     background-color: #9bb316;
 }
 
+/*Table Styling*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1.5px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child():hover {
+    background-color: #ddd;
+}
+
 
 /* NAVIGATION BAR */
 nav {
@@ -103,36 +132,18 @@ nav {
     background-color: #128a3cc7;
 }
 
-/* Style for mobile navigation toggle button */
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-}
-
 /* Screen size updater */  
 @media screen and (max-width: 768px) {  
-    nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        text-align: center;
-        border-radius: 5px;
+    .nav-links {
+        display: flex;
+        gap: 8px;
     }
 
     .nav-links a {
-        display: block;
-        padding: 10px;
-    }
-
-    .nav-toggle {
-        display: block;
+        /* text size, padding, and border radius decreased */
+        font-size: 1rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
     }
 }

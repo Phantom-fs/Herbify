@@ -4,7 +4,7 @@ body {
   padding: 0;
   background-image: url('bg.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 button {
@@ -173,9 +173,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   font-size: large;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav-links {
@@ -194,16 +194,6 @@ nav {
 
 .nav-links a:hover {
   background-color: #128a3cc7;
-}
-
-/* Style for mobile navigation toggle button */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
 }
 
 /* Screen size updater */
@@ -225,28 +215,26 @@ nav {
     margin: 10px 0;
   }
 
-  nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    text-align: center;
-    border-radius: 5px;
+  /*bar graph styles*/
+  .bar-label {
+    width: 200px;
+  }
+
+  .bar-percentage {
+    height: 15px;
+  }
+
+  /* NAVIGATION BAR */
+  .nav-links {
+    display: flex;
+    gap: 8px;
   }
 
   .nav-links a {
-      display: block;
-      padding: 10px;
-  }
-
-  .nav-toggle {
-      display: block;
+    /* text size, padding, and border radius decreased */
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
   }
 }
-
-/*
-rgba(39, 123, 75, 0.8)
-*/
